@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee - SPRINT & SIP</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        .product-description { color: #aaaaaa; } /* Contrast error */
+        .page-subtitle { color: #bbbbbb; background-color: #f5f5f5; } /* Contrast error */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-banner" role="banner">
+            <span>FREE SHIPPING ON ORDERS OVER £50</span>
+            <a href="shipping.html" class="banner-link">Learn more</a>
+        </div>
+
+        <div class="header-content">
+            <a href="index.html" class="logo">SPRINT & SIP</a>
+            
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                <span class="sr-only">Toggle navigation menu</span>
+                <span class="menu-icon-text">☰</span>
+            </button>
+        </div>
+        
+        <nav id="main-nav" class="nav-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="coffee.html">COFFEE</a></li>
+                <li><a href="brunch-menu.pdf" target="_blank">BRUNCH MENU</a></li>
+                <li><a href="run-club.html">RUN CLUB</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="page-header">
+            <!-- Using h3 as the first heading on the page - hierarchy issue -->
+            <h3>OUR COFFEE</h3>
+            <p class="page-subtitle">Carefully selected and roasted to perfection</p>
+        </section>
+
+        <section class="coffee-intro">
+            <!-- Using h2 after h3 - improper hierarchy -->
+            <h2>SMALL BATCH ROASTING</h2>
+            <p>Our beans are ethically sourced from small farms around the world. We roast in small batches weekly to ensure maximum freshness and flavor.</p>
+            <!-- Missing alt text -->
+            <img src="images/beans.jpeg">
+        </section>
+
+        <section class="coffee-products">
+            <h2>COFFEE SELECTION</h2>
+            
+            <div class="product-container">
+                <article class="product">
+                    <!-- Generic alt text -->
+                    <img src="images/beans.jpeg" alt="product">
+                    <h3>ETHIOPIAN YIRGACHEFFE</h3>
+                    <p class="product-description">Bright and floral with notes of citrus and bergamot.</p>
+                    <p class="product-price">£14.99 / 250g</p>
+                    <!-- Div instead of button -->
+                    <div class="buy-button" onclick="addToCart('Ethiopian')">ADD TO CART</div>
+                </article>
+                
+                <article class="product">
+                    <!-- No alt attribute -->
+                    <img src="images/beans.jpeg">
+                    <h3>COLOMBIAN SUPREMO</h3>
+                    <p class="product-description">Rich and balanced with caramel sweetness and nutty undertones.</p>
+                    <p class="product-price">£13.99 / 250g</p>
+                    <!-- Low contrast button -->
+                    <button class="buy-button" style="background-color:#dddddd; color:#999999;">ADD TO CART</button>
+                </article>
+                
+                <article class="product">
+                    <!-- Empty alt text -->
+                    <img src="images/CloseUpCoffee.png" alt="">
+                    <h3>RUNNER'S BLEND</h3>
+                    <p class="product-description">Our signature blend designed for pre-run energy - bold and smooth.</p>
+                    <p class="product-price">£15.99 / 250g</p>
+                    <button class="buy-button">ADD TO CART</button>
+                </article>
+            </div>
+        </section>
+
+        <!-- Subscribe form with accessibility issues -->
+        <section class="subscribe-section">
+            <h4>JOIN OUR COFFEE CLUB</h4>
+            <form>
+                <!-- No form labels -->
+                <input type="email" placeholder="Enter your email" style="padding: 10px; width: 70%; max-width: 300px;">
+                <button type="submit">SUBSCRIBE</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons" aria-label="Social media links">
+            <a href="#" aria-label="Instagram">Instagram</a>
+            <a href="#" aria-label="Facebook">Facebook</a>
+            <a href="#" aria-label="Twitter">Twitter</a>
+        </div>
+        <p class="copyright">© 2025 SPRINT & SIP - ALL RIGHTS RESERVED</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

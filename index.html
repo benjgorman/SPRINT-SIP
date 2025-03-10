@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SPRINT & SIP - Coffee Shop & Running Store</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;700&display=swap" rel="stylesheet">
+    <style>
+        .coffee-description { color: #aaaaaa; } /* Contrast error */
+        .copyright { color: #999999; } /* Contrast error */
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-banner" role="banner">
+            <span>FREE SHIPPING ON ORDERS OVER £50</span>
+            <a href="shipping.html" class="banner-link">Learn more</a>
+        </div>
+
+        <div class="header-content">
+            <a href="index.html" class="logo">SPRINT & SIP</a>
+            
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-nav">
+                <span class="sr-only">Toggle navigation menu</span>
+                <span class="menu-icon-text">☰</span>
+            </button>
+        </div>
+        
+        <nav id="main-nav" class="nav-menu">
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="coffee.html">COFFEE</a></li>
+                <li><a href="brunch-menu.pdf">BRUNCH MENU</a></li> <!-- Removed target="_blank" -->
+                <li><a href="run-club.html">RUN CLUB</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="image-slider" aria-label="Featured promotional images">
+                <!-- Missing alt text -->
+                <img src="images/HeroShot.png" class="slider-image active">
+            </div>
+            <!-- Using h2 instead of h1 - heading hierarchy issue -->
+            <h2 class="hero-text">WHERE RUNNERS REFUEL</h2>
+        </section>
+
+        <section class="about-section">
+            <h2 class="section-title">THE PERFECT BLEND</h2>
+            <p class="coffee-description">
+                Our specialty roasted coffee beans are carefully selected from small-batch farms across the globe. We believe great runs deserve great coffee.
+            </p>
+            <a href="coffee.html" class="shop-now">SHOP COFFEE</a>
+        </section>
+
+        <section class="gallery" aria-label="Gallery">
+            <h3 class="sr-only">Photo Gallery</h3> <!-- Changed from h2 to h3 - hierarchy issue -->
+            <figure>
+                <!-- Poor alt text -->
+                <img src="images/CloseUpCoffee.png" alt="image">
+                <figcaption>Fresh espresso coffee</figcaption>
+            </figure>
+            <figure>
+                <!-- Missing alt text -->
+                <img src="images/beans.jpeg">
+                <figcaption>Freshly roasted beans</figcaption>
+            </figure>
+            <figure>
+                <!-- Missing alt text -->
+                <img src="images/Shoes.jpg">
+                <figcaption>Fresh Kicks</figcaption>
+            </figure>
+        </section>
+
+        <section class="location-section">
+            <!-- Skipping from h2 to h4 - heading hierarchy issue -->
+            <h4 class="section-title">FIND US</h4>
+            <address class="address">
+                42 Redchurch Street<br>
+                Shoreditch, London<br>
+                E2 7DP
+            </address>
+            
+            <div class="hours">
+                <!-- Styled div instead of heading -->
+                <div style="font-weight:bold; font-size:18px; margin-bottom:10px;">Opening Hours</div>
+                <ul>
+                    <li>MONDAY - FRIDAY: 6:30 AM - 8:00 PM</li>
+                    <li>SATURDAY: 7:00 AM - 9:00 PM</li>
+                    <li>SUNDAY: 8:00 AM - 6:00 PM</li>
+                </ul>
+            </div>
+            
+            <img src="images/HeroShot.png" alt="Map showing our location in Shoreditch">
+        </section>
+        
+        <!-- Adding a contact form with accessibility issues -->
+        <section class="contact-section">
+            <h4>CONTACT US</h4>
+            <form>
+                <!-- Input with placeholder instead of label -->
+                <input type="text" placeholder="Your Name" class="form-input">
+                
+                <!-- Input with incorrectly associated label -->
+                <label for="user-phone">Your Email:</label>
+                <input type="email" id="user-email" class="form-input">
+                
+                <!-- Input with no label -->
+                <input type="tel" class="form-input">
+                
+                <!-- Button with contrast issue -->
+                <button type="submit" style="background-color:#dddddd; color:#999999;">SEND</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="social-icons">
+            <!-- Instagram SVG icon - missing accessible name -->
+            <a href="#">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="2" y="2" width="20" height="20" rx="5" stroke="white" stroke-width="2"/>
+                    <circle cx="12" cy="12" r="5" stroke="white" stroke-width="2"/>
+                    <circle cx="17.5" cy="6.5" r="1.5" fill="white"/>
+                </svg>
+            </a>
+            <!-- Strava SVG icon - missing accessible name -->
+            <a href="#">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M15.387 17.944l-2.089-4.116h-3.065L15.387 24l5.15-10.172h-3.066l-2.084 4.116z" fill="white"/>
+                    <path d="M10.232 13.828l3.066 6.056 3.066-6.056h-3.066l-1.528 3.028-1.538-3.028z" fill="white"/>
+                </svg>
+            </a>
+            <!-- Facebook SVG icon - missing accessible name -->
+            <a href="#">
+                <svg width="30" height="30" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3V2z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </a>
+        </div>
+        <p class="copyright">© 2025 SPRINT & SIP - ALL RIGHTS RESERVED</p>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
